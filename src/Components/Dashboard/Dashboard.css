@@ -1,0 +1,81 @@
+.dashboard-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-tickets {
+  list-style: none;
+  padding: 0;
+}
+
+.dashboard-ticket {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: transform 0.2s ease-in-out;
+}
+
+.ticket-description {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ticket-amount {
+  font-size: 14px;
+  color: #333;
+}
+
+.ticket-status {
+  font-size: 14px;
+  color: #888;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00076b;
+}
+
+button.deny {
+  background-color: #f44336;
+}
+
+button.deny:hover {
+  background-color: #e53935;
+}
+
+.no-tickets {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}

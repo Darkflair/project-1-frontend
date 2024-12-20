@@ -1,0 +1,50 @@
+.previous-tickets-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .previous-tickets-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .previous-tickets-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .previous-ticket {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .previous-ticket:hover {
+    transform: translateY(-5px);
+  }
+  
+  .ticket-description {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .ticket-amount {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .ticket-status {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .no-tickets {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+  }
+  

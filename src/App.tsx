@@ -1,24 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import LoginManagement from './Components/LoginComponents/LoginManagement';
+import NavBar from './Components/Navbar/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import { AuthProvider, UserContext } from "./Components/Context/UserContext";
+import Dashboard from './Components/Dashboard/Dashboard';
+import CreateTicket from './Components/Dashboard/CreateTicket';
+import PreviousTickets from './Components/Dashboard/PreviousTickets';
 
 function App() {
+  const userContextValue = {
+    user: { username: "exampleUser", isAuthenticated: true },
+    login: (username: string, password: string) => {
+      console.log("Logged in as", username);
+    },
+    logout: () => {
+      console.log("Logged out");
+    },
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AuthProvider>
+
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<LoginManagement />}></Route>
+          <Route path='/dashboard' element={<Dashboard />}></Route>
+          <Route path='/createTicket' element={<CreateTicket />}></Route>
+          <Route path='/previous-tickets' element={<PreviousTickets />}></Route>
+        </Routes>
+      </AuthProvider>
+
+
     </div>
   );
 }
